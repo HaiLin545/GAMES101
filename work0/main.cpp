@@ -17,7 +17,7 @@ int main() {
 
     M << cos(a), -sin(a), tx, sin(a), cos(a), ty, 0, 0, 1;
 
-    cout << "P : " << endl;
+    cout << "P: " << endl;
     cout << P << "\n\n";
     cout << "M : " << endl;
     cout << M << "\n\n";
