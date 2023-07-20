@@ -1,9 +1,24 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.23.3)
 project(Rasterizer)
 
-find_package(OpenCV REQUIRED)
 
 set(CMAKE_CXX_STANDARD 17)
+
+set(OpenCV_DIR ${CMAKE_SOURCE_DIR}/../opencv)
+find_package(OpenCV REQUIRED)
+if(OpenCV_FOUND)
+    message(STATUS "OpenCV found in: " ${OpenCV_INCLUDE_DIRS})
+    include_directories(${OpenCV_INCLUDE_DIRS})
+endif()
+
+
+set(Eigen3_DIR ${CMAKE_SOURCE_DIR}/../Eigen3/share/eigen3/cmake)
+find_package(Eigen3 REQUIRED)
+if(EIGEN3_FOUND)
+    message(STATUS "Eigen3 found in: " ${EIGEN3_INCLUDE_DIRS})
+    include_directories(${EIGEN3_INCLUDE_DIRS})
+endif()
+
 
 include_directories(/usr/local/include)
 
