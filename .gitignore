@@ -1,1 +1,4 @@
 .vscode
+build
+eigen3_repo/
+build/
