@@ -24,16 +24,16 @@ int main() {
     cout << "P * M" << endl;
     cout << M * P << endl;
 
-    // // Basic Example of cpp
-    // std::cout << "Example of cpp \n";
-    // float a = 1.0, b = 2.0;
-    // std::cout << a << std::endl;
-    // std::cout << a / b << std::endl;
-    // std::cout << std::sqrt(b) << std::endl;
-    // std::cout << std::acos(-1) << std::endl;
-    // std::cout << std::sin(30.0 / 180.0 * acos(-1)) << std::endl;
+    // Basic Example of cpp
+    std::cout << "Example of cpp \n";
+    float aa = 1.0, bb = 2.0;
+    std::cout << aa << std::endl;
+    std::cout << aa / bb << std::endl;
+    std::cout << std::sqrt(bb) << std::endl;
+    std::cout << std::acos(-1) << std::endl;
+    std::cout << std::sin(30.0 / 180.0 * acos(-1)) << std::endl;
 
-    // // Example of vector
+    // Example of vector
     // std::cout << "Example of vector \n";
     // // vector definition
     // Eigen::Vector3f v(1.0f, 2.0f, 3.0f);
@@ -62,6 +62,11 @@ int main() {
     // // matrix scalar multiply i * 2.0
     // // matrix multiply i * j
     // // matrix multiply vector i * v
+    // cout << "Scalar multiply: \n";
+    // cout << i * 2.0 << endl;
+    // cout<< "Multiply matrix: \n";
+    // cout<< i * j <<endl;
+
 
     return 0;
 }
