@@ -1,4 +1,3 @@
 .vscode
 build/
-eigen3_repo/
-opencv_repo/
+lib/
