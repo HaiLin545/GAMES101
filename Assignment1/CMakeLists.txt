@@ -4,7 +4,7 @@ project(Rasterizer)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(OpenCV_DIR ${CMAKE_SOURCE_DIR}/../opencv)
+set(OpenCV_DIR ${CMAKE_SOURCE_DIR}/../lib/opencv)
 find_package(OpenCV REQUIRED)
 if(OpenCV_FOUND)
     message(STATUS "OpenCV found in: " ${OpenCV_INCLUDE_DIRS})
@@ -12,7 +12,7 @@ if(OpenCV_FOUND)
 endif()
 
 
-set(Eigen3_DIR ${CMAKE_SOURCE_DIR}/../Eigen3/share/eigen3/cmake)
+set(Eigen3_DIR ${CMAKE_SOURCE_DIR}/../lib/Eigen3/share/eigen3/cmake)
 find_package(Eigen3 REQUIRED)
 if(EIGEN3_FOUND)
     message(STATUS "Eigen3 found in: " ${EIGEN3_INCLUDE_DIRS})

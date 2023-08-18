@@ -4,7 +4,7 @@ cmake_minimum_required (VERSION 3.23.3)
 project (Transformation)
 
 
-set(Eigen3_DIR ${CMAKE_SOURCE_DIR}/../Eigen3/share/eigen3/cmake)
+set(Eigen3_DIR ${CMAKE_SOURCE_DIR}/../lib/Eigen3/share/eigen3/cmake)
 find_package(Eigen3 REQUIRED)
 if(EIGEN3_FOUND)
     message(STATUS "Eigen3 found in: " ${EIGEN3_INCLUDE_DIRS})
