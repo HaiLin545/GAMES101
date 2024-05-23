@@ -15,3 +15,4 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_subdirectory(./work0)
 add_subdirectory(./Assignment1)
+add_subdirectory(./Assignment2)
