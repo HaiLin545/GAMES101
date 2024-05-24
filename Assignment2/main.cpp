@@ -20,21 +20,7 @@ Eigen::Matrix4f get_view_matrix(Eigen::Vector3f eye_pos) {
 }
 
 Eigen::Matrix4f get_model_matrix(float rotation_angle, Eigen::Vector3f n = {0.0f, 0.0f, 1.0f}) {
-    float angle = rotation_angle * MY_PI / 180.0f;
-    float cosa = cos(angle);
-    float sina = sin(angle);
-    Eigen::Matrix3f I = Eigen::Matrix3f::Identity();
-    Eigen::Matrix4f model = Eigen::Matrix4f::Zero();
-    Eigen::Matrix3f N;
-
-    N << 0, -n[2], n[1], \
-         n[2], 0, -n[0], \
-         -n[1], n[0], 0;
-    N = cosa * I + (1.0 - cosa) * (n * n.transpose()) + sina * N;
-
-    model.block(0, 0, 2, 2) = N.block(0, 0, 2, 2);
-    model(3, 3) = 1;
-
+    Eigen::Matrix4f model = Eigen::Matrix4f::Identity();
     return model;
 }
 
@@ -150,6 +136,7 @@ int main(int argc, const char **argv) {
         cv::imshow("image", image);
         key = cv::waitKey(10);
 
+        std::cout<< "frame = "<<frame_count++<<"\n";
     }
 
     return 0;
